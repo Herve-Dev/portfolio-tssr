@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab – Active Directory / DNS / DHCP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #1f2937;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 15px;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      background-color: #fff;
+      border-radius: 6px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    section h2, section h3 {
+      margin-top: 0;
+      color: #1f2937;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .meta {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .image-placeholder {
+      background-color: #e5e7eb;
+      border: 1px dashed #9ca3af;
+      padding: 40px;
+      text-align: center;
+      margin-top: 15px;
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background-color: #e5e7eb;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <h1>Hervé Taillefond | TSSR</h1>
+  <nav>
+    <a href="../index.html">Accueil</a>
+    <a href="labs.html">Labs</a>
+    <a href="about.html">À propos</a>
+    <a href="https://github.com/tonprofil" target="_blank">GitHub</a>
+  </nav>
+</header>
+
+<!-- CONTENU -->
+<main>
+
+  <!-- INTRO -->
+  <section>
+    <h2>Lab – Active Directory / DNS / DHCP</h2>
+    <p>
+      Ce lab a pour objectif de mettre en place un environnement Windows Server
+      permettant la gestion centralisée des utilisateurs, la résolution DNS
+      et l’attribution automatique des adresses IP.
+    </p>
+
+    <p class="meta">
+      <strong>Contexte :</strong> Formation TSSR<br>
+      <strong>Durée :</strong> 1 journée<br>
+      <strong>Environnement :</strong> Windows Server 2022, Windows 10, virtualisation
+    </p>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section>
+    <h3>Architecture du lab</h3>
+    <ul>
+      <li>1 contrôleur de domaine (AD, DNS, DHCP)</li>
+      <li>1 poste client Windows 10</li>
+      <li>Réseau : 192.168.10.0/24</li>
+    </ul>
+
+    <div class="image-placeholder">
+      Schéma réseau du lab (à remplacer par une image)
+    </div>
+  </section>
+
+  <!-- ETAPES -->
+  <section>
+    <h3>Étapes principales</h3>
+    <ol>
+      <li>Installation du rôle Active Directory Domain Services</li>
+      <li>Promotion du serveur en contrôleur de domaine</li>
+      <li>Configuration du DNS intégré à l’AD</li>
+      <li>Mise en place d’une plage DHCP</li>
+      <li>Jointure du poste client au domaine</li>
+    </ol>
+  </section>
+
+  <!-- TESTS -->
+  <section>
+    <h3>Tests et vérifications</h3>
+    <ul>
+      <li>Le poste client reçoit automatiquement une adresse IP</li>
+      <li>Résolution DNS fonctionnelle avec <code>nslookup</code></li>
+      <li>Connexion réussie avec un compte utilisateur du domaine</li>
+    </ul>
+
+    <div class="image-placeholder">
+      Capture ipconfig / nslookup (à remplacer)
+    </div>
+  </section>
+
+  <!-- PROBLEMES -->
+  <section>
+    <h3>Difficultés rencontrées</h3>
+    <ul>
+      <li>Le client ne recevait pas d’IP → serveur DHCP non autorisé dans l’AD</li>
+      <li>Problème de résolution DNS → mauvaise configuration DNS côté client</li>
+    </ul>
+  </section>
+
+  <!-- COMPETENCES -->
+  <section>
+    <h3>Compétences mises en œuvre</h3>
+    <ul>
+      <li>Administration Active Directory</li>
+      <li>Gestion des services DNS et DHCP</li>
+      <li>Diagnostic réseau</li>
+      <li>Virtualisation d’environnement de test</li>
+    </ul>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 – Portfolio TSSR</p>
+  <p>Lab réalisé dans le cadre de ma formation</p>
+</footer>
+
+</body>
+</html>
